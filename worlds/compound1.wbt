@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.4160794824284697 0.8960872188111784 0.15461423150959963 0.7447361765304301
-  position 1.1575762046993727 0.8500251863544878 1.7599399429407936
+  orientation -0.07495083207710344 -0.9920754023742472 -0.10084031324289566 1.9299899978837085
+  position -1.4184387944966632 0.42879000689801516 -0.6968347037662248
 }
 TexturedBackground {
 }
@@ -12,7 +12,7 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.15 0
+  translation 0 0.22 0
   children [
     DEF GR_FRAME Group {
       children [
@@ -28,7 +28,7 @@ Solid {
         Transform {
           translation 0 0.15 0
           children [
-            Shape {
+            DEF SPHERE Shape {
               appearance PBRAppearance {
                 baseColor 0.8 0 0
               }
@@ -36,6 +36,12 @@ Solid {
                 radius 0.05
               }
             }
+          ]
+        }
+        Transform {
+          translation 0 -0.15 0
+          children [
+            USE SPHERE
           ]
         }
       ]
