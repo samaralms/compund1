@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.07495083207710344 -0.9920754023742472 -0.10084031324289566 1.9299899978837085
-  position -1.4184387944966632 0.42879000689801516 -0.6968347037662248
+  orientation 0.8025000159239792 0.5634062426242507 0.1963851578252214 5.4636548167720385
+  position -1.1182720920250853 2.655217821887531 3.1224012216011454
 }
 TexturedBackground {
 }
@@ -12,7 +12,7 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.22 0
+  translation -0.020000000000000025 0.22 0
   children [
     DEF GR_FRAME Group {
       children [
@@ -42,6 +42,217 @@ Solid {
           translation 0 -0.15 0
           children [
             USE SPHERE
+          ]
+        }
+        Transform {
+          translation 0 -0.15 0.15
+          rotation 0 0.7071067811865475 0.7071067811865475 3.14
+          children [
+            DEF CYL1 Shape {
+              appearance PBRAppearance {
+                baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
+              }
+              geometry Cylinder {
+                height 0.3
+                radius 0.02
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.15 0.15
+          rotation 1 0 0 -1.5707996938995747
+          children [
+            USE CYL1
+          ]
+        }
+        Transform {
+          translation 0 0.15 0.3
+          children [
+            USE SPHERE
+          ]
+        }
+        Transform {
+          translation 0 -0.15 0.3
+          children [
+            USE SPHERE
+          ]
+        }
+        Transform {
+          translation 0 0 0.3
+          children [
+            USE CYL1
+          ]
+        }
+      ]
+    }
+    Transform {
+      translation 0.3 0 0
+      rotation 0 1 0 -1.57
+      children [
+        DEF GR_FRAME Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
+              }
+              geometry Cylinder {
+                height 0.3
+                radius 0.02
+              }
+            }
+            Transform {
+              translation 0 0.15 0
+              children [
+                DEF SPHERE Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.8 0 0
+                  }
+                  geometry Sphere {
+                    radius 0.05
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 -0.15 0
+              children [
+                USE SPHERE
+              ]
+            }
+            Transform {
+              translation 0 -0.15 0.15
+              rotation 0 0.7071067811865475 0.7071067811865475 3.14
+              children [
+                DEF CYL1 Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
+                  }
+                  geometry Cylinder {
+                    height 0.3
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 0.15 0.15
+              rotation 1 0 0 -1.5707996938995747
+              children [
+                USE CYL1
+              ]
+            }
+            Transform {
+              translation 0 0 0.3
+              children [
+                USE CYL1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    Transform {
+      translation 0 0 0.3000875959381807
+      rotation 0 1 0 1.57
+      children [
+        DEF GR_FRAME Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
+              }
+              geometry Cylinder {
+                height 0.3
+                radius 0.02
+              }
+            }
+            Transform {
+              translation 0 -0.15 0.15
+              rotation 0 0.7071067811865475 0.7071067811865475 3.14
+              children [
+                DEF CYL1 Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
+                  }
+                  geometry Cylinder {
+                    height 0.3
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 0.15 0.15
+              rotation 1 0 0 -1.5707996938995747
+              children [
+                USE CYL1
+              ]
+            }
+            Transform {
+              translation 0 0.15 0.3
+              children [
+                USE SPHERE
+              ]
+            }
+            Transform {
+              translation 0 -0.15 0.3
+              children [
+                USE SPHERE
+              ]
+            }
+            Transform {
+              translation 0 0 0.3
+              children [
+                USE CYL1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    Transform {
+      translation 0.3 0 0
+      children [
+        DEF GR_FRAME Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
+              }
+              geometry Cylinder {
+                height 0.3
+                radius 0.02
+              }
+            }
+            Transform {
+              translation 0 -0.15 0.15
+              rotation 0 0.7071067811865475 0.7071067811865475 3.14
+              children [
+                DEF CYL1 Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
+                  }
+                  geometry Cylinder {
+                    height 0.3
+                    radius 0.02
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 0.15 0.15
+              rotation 1 0 0 -1.5707996938995747
+              children [
+                USE CYL1
+              ]
+            }
+            Transform {
+              translation 0 0 0.3
+              children [
+                USE CYL1
+              ]
+            }
           ]
         }
       ]
